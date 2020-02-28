@@ -250,7 +250,7 @@ docker pull scrin/second-pytorch
 ```
 Then run:
 ```
-nvidia-docker run -it --rm -v /media/yy/960evo/datasets/:/root/data -v $HOME/pretrained_models:/root/model --ipc=host second-pytorch:latest
+docker run -it --rm -v /media/yy/960evo/datasets/:/root/data -v $HOME/pretrained_models:/root/model --ipc=host scrin/second-pytorch:latest
 python ./pytorch/train.py evaluate --config_path=./configs/car.config --model_dir=/root/model/car
 ```
 
